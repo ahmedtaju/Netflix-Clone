@@ -41,7 +41,7 @@ const Footer = () => {
           <li>Contact Us</li>
         </ul>
 
-        <p className="footer-copy">© 2025 Netflix Clone by YourName</p>
+        <p className="footer-copy">© 2025 Netflix Clone by Ahmmad Taju</p>
       </div>
     </footer>
   );
