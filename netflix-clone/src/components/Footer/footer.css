@@ -1,0 +1,58 @@
+/* Social icons row */
+.social-icons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.social-icons a {
+  color: #999;
+  transition: color 0.3s ease;
+  font-size: 24px;
+}
+
+.social-icons a:hover {
+  color: white;
+}
+
+/* Existing styles for .footer, .footer-links, .footer-copy... */
+
+.footer {
+  background-color: #141414;
+  color: #999;
+  padding: 40px 20px;
+  font-size: 13px;
+}
+
+.footer-container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 0;
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.footer-links li {
+  width: 45%;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.footer-links li:hover {
+  color: #fff;
+}
+
+.footer-copy {
+  text-align: center;
+  color: #666;
+  font-size: 12px;
+}
