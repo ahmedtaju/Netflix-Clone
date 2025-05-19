@@ -1,127 +1,71 @@
 * {
   margin: 0;
   padding: 0;
-}
-/* Reset some default list styles */
-ul {
-  list-style: none;
+  box-sizing: border-box;
+  /* background-color: #111; */
 }
 
-/* Navbar wrapper */
 .navbar {
-  width: 100%;
-  height: 80px;
-  background-color: #141414; /* Netflix dark theme */
-  color: white;
-  display: flex;
-  align-items: center;
-  font-family: Arial, sans-serif;
-  position: fixed;
+  position: sticky;
   top: 0;
+  width: 100%;
+  padding: 10px 40px;
   z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+  transition: background-color 0.4s ease;
+  background-color: transparent;
 }
 
-/* Main container inside navbar */
-.container {
+.navbar--black {
+  background-color: #111;
+}
+
+.navbar__container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  padding: 0 40px;
 }
 
-/* Left section: logo and nav items */
-.left {
+.navbar__left {
   display: flex;
   align-items: center;
-  gap: 30px;
 }
 
-.left img {
-  height: 70px;
-  cursor: pointer;
+.navbar__logo {
+  width: 100px;
+  object-fit: contain;
+  margin-right: 25px;
 }
 
-.left ul {
+.navbar__links {
+  list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 18px;
 }
 
-.left ul li {
+.navbar__links li {
+  color: white;
   font-size: 14px;
   cursor: pointer;
-  transition: color 0.2s ease-in-out;
+  transition: color 0.2s ease;
 }
 
-.left ul li:hover {
-  color: #e50914; /* Netflix red */
+.navbar__links li:hover {
+  color: #b3b3b3;
 }
 
-/* Right section: icons */
-.right ul {
+.navbar__right {
   display: flex;
-  gap: 20px;
   align-items: center;
+  gap: 25px;
 }
 
-.right ul li {
+.navbar__icon {
+  color: white;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  transition: transform 0.2s ease;
+  font-size: 28px;
+  transition: color 0.2s ease;
 }
 
-.right ul li:hover {
-  transform: scale(1.1);
-}
-
-/* RESPONSIVE STYLES */
-
-/* Tablet and below */
-@media (max-width: 768px) {
-  .container {
-    padding: 0 20px;
-  }
-
-  .left ul,
-  .right ul {
-    gap: 10px;
-  }
-
-  .left span {
-    display: none; /* hide "Home" to save space */
-  }
-
-  .left ul li,
-  .right ul li {
-    font-size: 12px;
-  }
-
-  .left img {
-    height: 24px;
-  }
-}
-
-/* Mobile */
-@media (max-width: 480px) {
-  .left ul {
-    display: none; /* hide nav items on very small screens */
-  }
-
-  .right ul {
-    gap: 10px;
-  }
-
-  .container {
-    padding: 0 10px;
-  }
-
-  .right ul li {
-    font-size: 0;
-  }
-
-  .right ul li svg {
-    font-size: 20px;
-  }
+.navbar__icon:hover {
+  color: #b3b3b3;
 }
